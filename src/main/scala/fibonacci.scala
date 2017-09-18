@@ -25,8 +25,8 @@ object FibApp {
       val bcast = builder.add(Broadcast[Fib](2))
       val merge = builder.add(MergePreferred[Fib](1)) // the number of secondary in ports
 
-      init ~> merge  ~>  bcast
-      bcast ~> nextval ~> merge.preferred
+      init ~> merge  ~>  bcast ~> nextval ~> merge.preferred
+      
 
       SourceShape(bcast.out(1)) // note this is why bcast has 2 out ports
     })

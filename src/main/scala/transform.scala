@@ -5,7 +5,7 @@ import akka.stream.scaladsl.{Flow, Sink, Source}
 
 object TransformStages extends App {
 
-  implicit val actorSystem = ActorSystem("CustomStages")
+  implicit val actorSystem = ActorSystem("TransformStages")
   implicit val actorMaterializer = ActorMaterializer()
 
   case class Start(data:Int, info:String )

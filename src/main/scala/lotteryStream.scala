@@ -1,8 +1,8 @@
 package com.andyr
 import akka.NotUsed
 import akka.actor.ActorSystem
-import akka.stream.{ActorMaterializer, ClosedShape, FlowShape,SourceShape}
-import akka.stream.scaladsl.{Balance, Flow, GraphDSL, Merge, Sink, Source,Broadcast}
+import akka.stream.{ActorMaterializer, FlowShape}
+import akka.stream.scaladsl.{Flow, GraphDSL, Merge, Sink, Source,Broadcast}
 import com.andyr.LotteryGen.{LuckyStars, MainNumbers, Ticket}
 class LotteryChecker(numberOfTickets:Int) {
 

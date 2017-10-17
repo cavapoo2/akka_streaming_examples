@@ -26,7 +26,7 @@ object RunLength extends App {
               pull(in)
             }
             else {
-              push(out,store.length.toString + "d")
+              push(out,store.length.toString + delim)
               store = store.drop(store.length)
             }
           }
